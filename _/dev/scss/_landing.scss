@@ -1,0 +1,61 @@
+body.landing {
+  background-color: $blackberry;
+}
+
+.hero-content {
+  background-image: url('../images/bloc_jams_bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  position: relative;
+
+  h1 {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: .5rem;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 0 $blackberry;
+    text-transform: uppercase;
+    top: 40%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translate(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+  }
+}
+
+
+.selling-points {
+  @include clear-fix;
+  position: relative;
+}
+
+.point {
+  opacity: 0;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  -moz-transform: scaleX(.9), translateY(3rem);
+  -webkit-transform: scaleX(.9), translateY(3rem);
+  transform: scaleX(.9), translateY(3rem);
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  -moz-transition-delay: .2s;
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+  color: $cerise;
+  font-size: 5rem;
+}

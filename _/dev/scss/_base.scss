@@ -1,0 +1,59 @@
+ *,
+ *::before,
+ *::after {
+  @include border-box-sizing;
+ }
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  color: $white;
+  font-family: 'Open Sans';
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 64rem;
+
+  &.narrow {
+    max-width: 56rem;
+  }
+}
+
+// Medium and small screens (640px)
+
+@media (min-width: 640px) {
+  html { font-size: 112%; }
+
+  .container {
+    @include container();
+  }
+
+  .point {
+    @include span(8 of 24);
+    &:nth-of-type(2n) {
+      @include last;
+    }
+  }
+
+  .collection-album-container {
+    @include gallery(6 of 24);
+  }
+
+
+}
+
+// Large screens (1024px)
+
+@media (min-width: 1024px) {
+  html { font-size: 120%; }
+
+  .collection-album-container {
+    @include gallery(3 of 24);
+  }
+
+}
